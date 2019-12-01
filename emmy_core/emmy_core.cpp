@@ -89,6 +89,12 @@ int stop(lua_State* L) {
 	return 0;
 }
 
+int connected(lua_State* L){
+    const auto suc = EmmyFacade::Get()->IsConnected()
+    if (suc) return 1;
+    return 2;
+}
+
 int gc(lua_State* L) {
 	EmmyFacade::Get()->OnLuaStateGC(L);
 	return 0;

@@ -140,6 +140,13 @@ int EmmyFacade::OnConnect(bool suc) {
 	return 0;
 }
 
+int EmmyFacade::IsConnected() const {
+    if (transporter){
+        return transporter->IsConnected();
+    }
+    return false;
+}
+
 int EmmyFacade::OnDisconnect() {
 	isIDEReady = false;
 	isWaitingForIDE = false;
