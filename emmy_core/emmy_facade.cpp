@@ -140,7 +140,7 @@ int EmmyFacade::OnConnect(bool suc) {
 	return 0;
 }
 
-int EmmyFacade::IsConnected() const {
+int EmmyFacade::IsConnected() {
     if (transporter){
         return transporter->IsConnected();
     }

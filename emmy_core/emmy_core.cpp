@@ -90,7 +90,7 @@ int stop(lua_State* L) {
 }
 
 int isConnected(lua_State* L){
-    const auto suc = EmmyFacade::Get()->IsConnected()
+    const auto suc = EmmyFacade::Get()->IsConnected();
     if (suc) return 1;
     return 2;
 }
