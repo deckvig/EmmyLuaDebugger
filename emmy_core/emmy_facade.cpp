@@ -144,7 +144,7 @@ int EmmyFacade::IsConnected() const {
     if (transporter){
         return transporter->IsConnected();
     }
-    return false;
+    return 0;
 }
 
 int EmmyFacade::OnDisconnect() {

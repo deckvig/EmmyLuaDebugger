@@ -89,7 +89,7 @@ int stop(lua_State* L) {
 	return 0;
 }
 
-int connected(lua_State* L){
+int isConnected(lua_State* L){
     const auto suc = EmmyFacade::Get()->IsConnected()
     if (suc) return 1;
     return 2;
@@ -122,6 +122,7 @@ static const luaL_Reg lib[] = {
 	{"waitIDE", waitIDE},
 	{"breakHere", breakHere},
 	{"stop", stop},
+    {"isConnected",isConnected},
 	{nullptr, nullptr}
 };
 

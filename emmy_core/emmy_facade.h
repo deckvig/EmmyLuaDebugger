@@ -47,6 +47,7 @@ public:
 	bool PipeConnect(lua_State* L, const std::string& name, std::string& err);
 	int BreakHere(lua_State* L);
 	int OnConnect(bool suc);
+    int IsConnected();
 	int OnDisconnect();
 	void WaitIDE(bool force = false);
 	void OnReceiveMessage(const rapidjson::Document& document);
